@@ -28,7 +28,7 @@
   "nickNameBot": "RazihelX🀄♠️",
   "prefix": "+",
   "database": {
-    "type": "json",
+    "type": "sqlite",
     "uriMongodb": "",
     "autoSyncWhenStart": false,
     "autoRefreshThreadInfoFirstTime": true,
