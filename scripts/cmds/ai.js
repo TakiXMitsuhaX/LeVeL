@@ -1,4 +1,4 @@
-const axios = require('axios');
++cmd install ai.js const axios = require('axios');
 
 const Prefixes = [
    'bard',
@@ -69,13 +69,13 @@ module.exports = {
 
       await message.reply("Answering your question. Please wait a moment...");
 
-      const response = await axios.get(`https://api.easy-api.online/v1/globalgpt?q=${encodeURIComponent(prompt)}`);
+      const response = await axios.get(`https://openaikey.onrender.com/api?prompt=${encodeURIComponent(prompt)}`);
 
       if (response.status !== 200 || !response.data) {
         throw new Error('Invalid or missing response from API');
       }
 
-      const messageText = response.data.content.trim();
+      const messageText = response.data.response.trim();
 
       await message.reply(messageText);
 
